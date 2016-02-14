@@ -1,0 +1,2282 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)index.html#-24173870 -->
+<html ng-controller="DocRoot" lang="en" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-combined.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/introstyle.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+    <title ng-bind-template="CollaboraTex-1.0-SNAPSHOT" class="ng-binding">CollaboraTex API</title>
+</head>
+<body>
+
+<div id="content" class="">
+
+<div id="rightwithnav">
+    <div id="navigation">
+    <ul class="nav nav-pills" style="margin-left: -10px; padding-bottom: 14px; padding-left: 10px; padding-top: 4px;">
+        <li ng-class="{active: navigationView == &#39;hierarchical&#39;}" class="active">
+            <a ng-click="navigationView = &#39;hierarchical&#39;" style="cursor: pointer">Tree</a>
+        </li>
+    </ul>
+    </div>
+
+    <div id="right">
+        <!--
+        <div id="expandCollapseTree" class="treeCollapse">
+            <span ng-click="collapseTree()" ng-show="hierarchyOpen == true">
+                collapse all
+            </span>
+            <span ng-click="expandTree()" ng-show="hierarchyOpen == false">
+                expand all
+            </span>
+        </div>
+        -->
+    <div id="rightContent">
+        
+    <div ng-show="navigationView == &#39;search&#39;" class="ng-hide">
+        <div id="results">
+            <ul id="resultList">
+                <!-- ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-1810603558">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#33832995">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/import</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#587077955">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small GET" set-class="interface.http" set-text="interface.http">GET</span>
+                            </div><span set-text="interface.url" class="result">/projects/uploadurl</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#1335127259">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small DELETE" set-class="interface.http" set-text="interface.http">DELETE</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#684643038">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small GET" set-class="interface.http" set-text="interface.http">GET</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/download</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-1922594851">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-725579984">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small GET" set-class="interface.http" set-text="interface.http">GET</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#595828384">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small PUT" set-class="interface.http" set-text="interface.http">PUT</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-1970776818">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small DELETE" set-class="interface.http" set-text="interface.http">DELETE</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-24173870">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}/content</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#1754517434">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small GET" set-class="interface.http" set-text="interface.http">GET</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}/meta</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-24419725">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}/patch</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-1322725626">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}/rename</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#1703628921">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/files/{fileId}/setmaintex</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#1629580173">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/projects/{projectId}/rename</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#710664819">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/search/</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#1475616955">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small GET" set-class="interface.http" set-text="interface.http">GET</span>
+                            </div><span set-text="interface.url" class="result">/session/channel/token</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#176882269">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/session/document/{fileId}/register</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" ng-show="((interface | searchByExampleFilter:searchByExample:$storage.baseUrl)
+                           &amp;&amp; (interface | serviceTagFilter:serviceTags)
+                           &amp;&amp; (interface | searchQueryFilter:searchQuery))" class="ng-scope">
+                    <div class="summaryMethodUrl">
+                        <a set-href="&#39;#&#39; + interface.hash" target="_self" href="index.html#-359782236">
+                            <div class="httpMethodSearchResult">
+                                <span class="httpMethod small POST" set-class="interface.http" set-text="interface.http">POST</span>
+                            </div><span set-text="interface.url" class="result">/session/document/{fileId}/unregister</span>
+                        </a>
+                    </div>
+                </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] -->
+            </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<div id="leftwithnavbar">
+    <div class="navbar navbartop">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="index.html#home" target="_self" set-text="projectTitle">CollaboraTex API</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="left">
+        <div id="main">
+
+            <a id="home"></a><a id="interfaces"></a><a id="warnings"></a>
+
+            <div id="intro" ng-show="view==&#39;interfaces&#39;" class=""></div>
+
+            <div ng-view=""></div>
+
+            <div id="contentContent">
+
+                <div ng-show="view==&#39;interfaces&#39;" class="">
+
+        <ul id="mainList">
+            <!-- ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-1810603558">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Create new project</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">ProjectDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="33832995">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Import project</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/import</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">ProjectDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 -->
+                                <!-- setIf: interface.produces.length == 0 --><span set-if="interface.produces.length == 0" class="ng-scope">no type</span>
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="587077955">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Get unique upload url from GAE Blobstore API</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall GET" set-class="interface.http">
+                    <span class="httpMethod GET" set-class="interface.http" set-text="interface.http">GET</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/uploadurl</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">String containing the unique upload URL for the BlobStore API</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">text/plain</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="1335127259">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Delete project</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall DELETE" set-class="interface.http">
+                    <span class="httpMethod DELETE" set-class="interface.http" set-text="interface.http">DELETE</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span></span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">no content</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="684643038">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Download project</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall GET" set-class="interface.http">
+                    <span class="httpMethod GET" set-class="interface.http" set-text="interface.http">GET</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/download</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">ZIP with the project files</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 -->
+                                <!-- setIf: interface.produces.length == 0 --><span set-if="interface.produces.length == 0" class="ng-scope">no type</span>
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-1922594851">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Add new file</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+
+						<h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">MultiPart Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">file</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">File</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">the actual file (not a ProjectFileDTO)</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">ProjectFileDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 -->
+                                <!-- setIf: interface.produces.length == 0 --><span set-if="interface.produces.length == 0" class="ng-scope">no type</span>
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+<hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="35453523342">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Import files</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/import</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">ProjectFileDTOs as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 -->
+                                <!-- setIf: interface.produces.length == 0 --><span set-if="interface.produces.length == 0" class="ng-scope">no type</span>
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-725579984">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Get file</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall GET" set-class="interface.http">
+                    <span class="httpMethod GET" set-class="interface.http" set-text="interface.http">GET</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span></span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">the project file (not DTO, the actual file)</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 -->
+                                <!-- setIf: interface.produces.length == 0 --><span set-if="interface.produces.length == 0" class="ng-scope">no type</span>
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="595828384">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Update file</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall PUT" set-class="interface.http">
+                    <span class="httpMethod PUT" set-class="interface.http" set-text="interface.http">PUT</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span></span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+
+						<h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">MultiPart Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">file</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">File</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">the actual file (not a ProjectFileDTO)</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">JSON with Status OK, Bad Request if Project was not found, Not Found if previous Blob couldn't be deleted</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-1970776818">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Delete file</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall DELETE" set-class="interface.http">
+                    <span class="httpMethod DELETE" set-class="interface.http" set-text="interface.http">DELETE</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span></span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">JSON with Status No Content on success, Bad Request if Project was not found, Not Found if Blob couldn't be found in BlobStore</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-24173870">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Update the content of a file with given string</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span>/content</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Form Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">content</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">string</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">The new file content as plain-text</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">JSON with Status OK on success, Bad Request if Project was not found, Not Found if Blob couldn't be found in BlobStore, Internal Server Error if new Blob couldn't be stored in BlobStore</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="1754517434">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Get the meta data of a file</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall GET" set-class="interface.http">
+                    <span class="httpMethod GET" set-class="interface.http" set-text="interface.http">GET</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span>/meta</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">ProjectFileDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-24419725">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Patch file with single string from diff_match_patch library</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span>/patch</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Form Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">patch</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">string</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Single text patch from diff_match_patch library</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">JSON with Status OK on success, Bad Request if Project was not found, Not Found if Blob couldn't be found in BlobStore, Internal Server Error if new Blob couldn't be stored in BlobStore</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-1322725626">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Rename file</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span>/rename</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Form Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">value</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">string</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">New name</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">updated ProjectFileDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="1703628921">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Set file as main tex</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/files/<span class="paramName">fileId</span>/setmaintex</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Form Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">mainTex</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">boolean</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">true|false</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">updated ProjectFileDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="1629580173">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Rename project</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/projects/<span class="paramName">projectId</span>/rename</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">projectId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Form Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">value</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">string</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">New name</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">updated ProjectDTO as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="710664819">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Search all files for a given query</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/search/</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Form Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">query</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">string</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">String</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">search results as JSON</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="1475616955">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Get unique Channel API Token for Client</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall GET" set-class="interface.http">
+                    <span class="httpMethod GET" set-class="interface.http" set-text="interface.http">GET</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/session/channel/token</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">Token as String</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">text/plain</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="176882269">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Register client for open document</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/session/document/<span class="paramName">fileId</span>/register</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">JSON with Status OK on success</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] --><li ng-repeat="interface in interfaces | orderBy:[&#39;url&#39;, interfaceHttpOrderFunction]" class="ng-scope">
+
+                <div ng-click="interface.collapsed = !interface.collapsed" style="cursor: pointer;" set-id="interface.hash" id="-359782236">
+                    <i class="icon-bookmark methodIcon"></i>
+                    <h3 class="methodTitle" set-class="deprecated : interface.deprecated, valueMissing : ! interface.title" set-html="interface.title || &#39;title missing&#39;">Unregister client for opened document</h3>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <div>
+                    <!-- ngRepeat: tag in interface.tags | arraySort -->
+                </div>
+
+                <!-- setIf: interface.deprecated -->
+                <p class="methodDescription" set-html="interface.beschrijving"></p>
+                </div>
+
+                <div class="methodCall POST" set-class="interface.http">
+                    <span class="httpMethod POST" set-class="interface.http" set-text="interface.http">POST</span><!-- (no whitespace)
+                 --><span class="methodBaseUrl ng-binding" ng-show="editingBaseUrl == false" ng-click="editingBaseUrl = true; baseUrl = $storage.baseUrl">http://example.com</span><!--
+                 --><!--
+                 --><span class="methodUrl" set-html="interface.url | formatUrlParams">/session/document/<span class="paramName">fileId</span>/unregister</span>
+                </div>
+
+                <div ng-show="!interface.collapsed" class="">
+                <!-- ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 --><div set-if="interface.inputs[inputType].length &gt; 0" class="ng-scope">
+                        <h4 set-text="(inputType | capitaliseFirstLetter) + &#39; Parameters&#39;">Path Parameters</h4>
+
+                        <table class="methodParams">
+                            <tbody><!-- ngRepeat: input in interface.inputs[inputType] --><tr ng-repeat="input in interface.inputs[inputType]" class="ng-scope">
+                                <td>
+                                <span class="parameterContainer">
+                                    <span class="parameterName" set-text="input.name">fileId</span>
+                                    <span class="parameterTypeAndValue">
+                                        <span class="parameterType" set-text="formatTypeValue(input.typeValue)">number</span>
+                                        <span class="parameterDefaultValue" set-html="formatDefaultValue(input.typeValue, input.defaultValue)"></span>
+                                    </span>
+                                </span>
+
+                                </td>
+                                <td>
+                                    <div set-class="valueMissing">Long</div>
+                                </td>
+                            </tr><!-- end ngRepeat: input in interface.inputs[inputType] -->
+                        </tbody></table>
+                    </div>
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] --><div ng-repeat="inputType in [&#39;PATH&#39;, &#39;QUERY&#39;, &#39;MATRIX&#39;, &#39;FORM&#39;, &#39;COOKIE&#39;, &#39;HEADER&#39;]" class="ng-scope">
+                    <!-- setIf: interface.inputs[inputType].length > 0 -->
+                </div><!-- end ngRepeat: inputType in ['PATH', 'QUERY', 'MATRIX', 'FORM', 'COOKIE', 'HEADER'] -->
+
+                <!-- setIf: interface.inputs.BODY.length > 0 -->
+
+                <!-- setIf: interface.output.typeValue != undefined --><div set-if="interface.output.typeValue != undefined" class="returnsContainer ng-scope">
+                    <h4>Returns</h4>
+
+                    <div class="returnsBodyContainer">
+
+                        <p class="methodDescription">JSON with Status OK on success, Not Modified if Client wasn't registered</p>
+
+                        <div class="mediaTypeContainer">
+                            <div class="mediaType">
+                                <!-- setIf: interface.produces.length > 0 --><span set-if="interface.produces.length &gt; 0" set-text="interface.produces" class="ng-scope">application/json</span>
+                                <!-- setIf: interface.produces.length == 0 -->
+                            </div>
+                        </div>
+                        <!-- setIf: interface.compressed -->
+
+                        <div class="typeValueContainer">
+                            <!-- setIf: interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum' --><div set-if="interface.output.typeValue.type == &#39;simple&#39;
+                                      || interface.output.typeValue.type == &#39;enum&#39;" class="ng-scope">
+                                <span class="parameterType" set-text="formatTypeValue(interface.output.typeValue)">javax.ws.rs.core.Response</span>
+                                <span class="parameterDefaultValue" set-html="formatDefaultValue(interface.output.typeValue)"></span>
+                            </div>
+                            <!-- setIf: !(interface.output.typeValue.type == 'simple'
+                                      || interface.output.typeValue.type == 'enum') -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- setIf: interface.statusCodes.length > 0 -->
+
+                <hr class="interfaceSeparator">
+                </div>
+            </li><!-- end ngRepeat: interface in interfaces | orderBy:['url', interfaceHttpOrderFunction] -->
+        </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div id="footer">
+            <div style="padding-top: 10px; padding-bottom: 10px; text-align: center;">
+                <p class="muted ng-binding" style="font-size: 12px; margin: 0;">
+                    <span set-text="dateOfGeneration">2014-05-14 18:35:45</span> - REST documentation generated by 
+                    <a href="http://www.miredot.com/" target="_blank">MireDot</a> version 1.4
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+</body></html>

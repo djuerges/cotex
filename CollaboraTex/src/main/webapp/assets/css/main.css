@@ -1,0 +1,265 @@
+/**
+ * @author Daniel Jürges <djuerges@googlemail.com>
+ */
+
+/* import font definitions / load local font files */
+@import url('font.css');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    background-color: #fefefe;
+    /* türkis 144F49 - grün 5E8C6A - green haze 03A678 - light sea green 1BA39C - redutch teal 1693A5 - caccade 95A5A6 - blau 336E7B */
+}
+
+/* add some more space between all icons and the menu item text */
+i.fa { margin-right: 2px; }
+
+/* highlight main text files with star before them so invert margin a bit */
+i.fa-star { margin-left: -18px; padding-right: 0px; line-height: 40%;}
+#fileContextMenu i.fa-star { margin-left: 0px; }
+
+/* show close button on tab a bit right from the text */
+#tab-close { margin-left: 15px; }
+
+
+/*
+
+    NAVIGATION BAR
+
+*/
+
+/* position logo */
+#logo {
+    float: left; 
+    margin-left: -10px;
+    padding: 5px 10px 0px 3px;
+}
+
+/* disable hover on clicked menus in main navigation bar */
+#collaboratex-navbar > ul > li.dropdown.open > a {
+    background-color: #f8f8f8;
+}
+
+/*
+
+    SIDEBAR
+
+*/
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 17.5%;
+    z-index: -1;
+    display: block;
+    padding: 50px 25px 25px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar > h3 {
+    font-family: 'Museo Slab', sans-serif;
+    color: #777;
+    margin: 30px 0px;
+}
+
+/* do not waste so much space when separating project name and files */
+hr {
+    margin: 0px;
+}
+
+.nav-sidebar {
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: 30px;
+}
+.nav-sidebar > li > a {
+    font-size: 14px;
+    color: #777;
+    line-height: 30%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.nav-sidebar > .active > a {
+    font-size: 18px;
+    line-height: 50%;
+}
+.nav-sidebar > .active > a:hover {
+    color: #333;
+}
+
+.nav-sidebar > li > a:hover {
+    color: #333;
+    background-color: #fefefe;
+}
+
+a#api {
+    color: #777;
+}
+
+/*
+
+    CONTEXT MENUS
+
+*/
+
+/* hide all context menus initially */
+#sidebarContextMenu, #projectContextMenu, #fileContextMenu {
+    position: absolute;
+    display:none;
+}
+
+/*
+
+    MAIN CONTENT
+
+*/
+
+/* position div for content */
+#content {
+    position: absolute;
+    right: 25px;
+    width: 75%;
+    margin: auto;
+}
+
+/* center headlines in content div */
+#content h1 {
+    text-align: center;
+}
+
+/* let editor use maximum content size */
+#editor {
+    /* falsche cursor position wenn als font eine nicht monospace schriftart eingestellt wird */
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    width: 100%;
+    height: 100%;
+    font-size: 10.5pt; 
+    margin-top: -1px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    z-index: 0;
+}
+
+#compilationbar > button {
+    margin: 0px 3px;
+}
+
+#compilationbar > span#compiletime{
+    margin-right: 10px;
+}
+
+#compilationbar > span#compiletime{
+    margin-right: 10px;
+}
+
+/*
+
+    LOG
+
+*/
+
+div#log {
+    overflow: auto;
+    max-height: 30%;
+    padding: 20px 10%;
+    background-color: #f8f8f8;
+    font-size: 13px;
+    border-top: 1px solid #ccc;
+}
+
+/* don't waste so much space on headline '*/
+div#log h3 {
+    margin-top: -10px;
+}
+
+/* mark warning dark yellow */
+span.warning {
+    color: #FBB829;
+}
+
+/* mark error red */
+span.error {
+    color: #FF0000;
+}
+
+
+/*
+
+    SEARCH RESULTS PAGE
+
+*/
+
+/* keep margin between headline of search results and the h1 headline */
+#content > h3.sub-header {
+    margin-top: 80px;
+}
+
+
+/*
+
+    INLINE EDITING
+
+*/
+
+/* center inline renaming of */
+.editable-click, a.editable-click, a.editable-click:hover { 
+    border: none; 
+}
+
+/* */
+.editable-inline { 
+    margin-left: 20px;
+}
+
+/* position and style inline editing text field */
+input.form-control.input-sm {
+    font-size: 14px;
+    width: 180px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 5px;
+
+}
+
+/* when not posting to url and therefore change remains unsaved, do not make bold */
+.editable-unsaved { 
+    font-weight: normal; 
+}
+
+/* maintain font-size when editing project names */
+body > div.container-fluid > div > div > ul > li.active > span > div > form > div > div > div > input {
+    font-size: 18px;
+}
+
+/* when editing in tabs, maintain same font-size and positioning */
+#content > ul > li > span > div > form > div > div > div > input {
+    width: 140px;
+    padding-top: 18px;
+    font-size: 16px;
+}
+
+/* align close button horizontally with editing field */
+#content > ul > li > span > div > form > div > div > div > span {
+    padding-top: 24px;
+}
+
+
+/*
+
+    SUB-MENU SUPPORT
+
+*/
+
+/* add support for submenus */
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}

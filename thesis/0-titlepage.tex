@@ -1,0 +1,121 @@
+%---------------------------------------------------------------------------
+% Frontpage
+%---------------------------------------------------------------------------
+
+% Die Richtline zum Aufbau des Deckblatts von Bachelor- und Masterarbeiten
+% findet sich hier:
+% @see: http://www.uni-luebeck.de/fileadmin/uzl_ssc/PDF-Dateien/Richtlinie-Deckblatt-MINT-Abschlussarbeit-2012-10-18.pdf
+
+\newcommand{\titlepageskip}{\vskip 20pt}
+
+% @see: http://tex.stackexchange.com/questions/31705/different-margins-for-title-page
+\newgeometry{top=1in,bottom=1in,right=1in,left=1.2in}
+\begin{titlepage}
+
+\title{A collaborative Latex-Editor in the cloud}
+\author{Daniel Phillipp Jürges}
+
+{\Large
+	% 1. Offizielles Logo des Instituts, an dem die Arbeit angesiedelt ist. (Das offizielle Logo
+	% enthält das Siegel der Universität zusammen mit dem Text üniversität zu Lübeck"
+	% und darunter den Namen des Instituts.) Dieses Logo ist bei den Instituten zu
+	% bekommen. Das Logo muss oben links platziert werden.
+	\includegraphics[width=80mm]{images/Logo_Inst_Telematik_cropped.pdf}
+	\vskip 44pt
+
+	% 2. Optional: Noch einmal Name des Instituts und Angabe der Direktorin oder des
+	% Direktors des Instituts.
+
+	% 3. Titel der Arbeit in deutscher Sprache und ebenfalls in englischer Sprache. Dabei soll
+	% die Sprache, in der die Arbeit verfasst wurde, als erste angeführt werden; die andere
+	% Sprache kann weniger prominent dargestellt werden.
+	% Auch bei englischsprachigen Studiengängen sollen die Titelblätter auf Deutsch sein.
+	{\LARGE\bf A Collaborative \LaTeX Editor in the Cloud\par}
+	{\LARGE Ein kollaborativer \LaTeX Editor in der Cloud\par}
+
+	\titlepageskip
+	% 4. Der Text "Bachelorarbeit" oder "Masterarbeit" (nicht "Bachelor-Arbeit" oder "Master-Arbeit").
+	%{\bf Bachelorarbeit}
+	{\bf Masterarbeit}
+
+	\titlepageskip
+	%5. Der Text "im Rahmen des Studiengangs"
+	im Rahmen des Studiengangs\\
+	%6. Der ausgeschriebene Name des Studiengangs (also beispielsweise "Informatik"
+	%oder "Molecular Life Science", hingegen nicht "Bioinformatik" oder "MLS")
+	{\bf Informatik}\\
+	%7. Der Text "der Universität zu Lübeck"
+	der Universität zu Lübeck
+
+	\titlepageskip
+	%8. Der Text "Vorgelegt von" und der Name der Studentin oder des Studenten
+	vorgelegt von\\
+	{\bf Daniel Phillipp Jürges}
+
+	\titlepageskip
+	%9. Der Text äusgegeben und betreut von"
+	ausgegeben und betreut von\\
+	%10. Der Name der ersten Prüferin oder des ersten Prüfers. Dies ist immer gleichzeitig
+	%die Betreuerin oder der Betreuer im Sinne der Prüfungsordnung.
+	{\bf Prof.~Dr.~Stefan~Fischer}
+
+	% Diesen Teil entfernen, wenn die Arbeit KEINEN Unterstützer hatte
+	\titlepageskip
+	{
+		%11. Optional der Text "Mit Unterstützung von" und der Name von weiteren Personen,
+		%die die Betreuung besonders unterstützt haben. Beispielsweise können dies
+		%wissenschaftliche Mitarbeiter sein oder Mitarbeiter von Firmen, wenn die Arbeit
+		%extern geschrieben wurde.
+		mit Unterstützung von\\
+		{\bf Dipl.-Inf.~Klaus-Dieter~Schumacher}\\
+	}
+
+
+	\vfill 
+	%13. Der Text "Lübeck, den" und das Abgabedatum.
+	{
+		Hamburg, \today %\date{3. Juni 1999}
+	}
+}
+\end{titlepage}
+\restoregeometry
+
+\cleardoublepage
+
+% Erklaerung
+\newpage
+\vspace*{7cm}
+\centerline{\bf Erklärung}
+
+\vspace*{1cm}
+Ich versichere an Eides statt, die vorliegende Arbeit selbstständig und nur unter Benutzung
+der angegebenen Hilfsmittel angefertigt zu haben.
+
+\vspace*{3cm}
+Hamburg, \today %\date{3. Juni 1999} 
+
+\pagestyle{headings}
+
+\cleardoublepage
+
+% Abstract und Kurzfassung
+
+\section*{Abstract}
+
+The Institute of Telematics of the University of Lübeck has a Cloud Computing Lab for research purposes. For this, a fully matured application is needed which utilises the exisiting infrastucture to capacity while having also a longstanding demand for a software that is capable of the collaborative real-time editing of \LaTeX documents. This work is dedicated to the investigation of the principles and algorithms of collaborative software and the development of such a collaborative real-time \LaTeX editor.
+
+%
+\vskip 3cm
+%
+
+\section*{Kurzfassung}
+
+Das Institut für Telematik der Universität zu Lübeck ist zu Forschungszwecken im Besitz eines Cloud Computing Lab. Für dieses wird eine ausgereifte Applikation benötigt, die intensiven Gebrauch von der bestehenden Infrastruktur macht und diese auslastet. Zugleich gibt es eine langbestehendes Interesse an einer Software, die in der Lage ist, das gleichzeitige, kollaborative Editieren von \LaTeX Dokumenten zu ermöglichen. Diese Arbeit ist der Untersuchung der grundlegenden Prinzipien und Algorithmen kollaborativer Software gewidmet, sowie der Entwicklung eines solchen kollaborativen Echtzeit-Editors.
+
+\cleardoublepage
+
+% Aufgabenstellung
+
+% \section*{Aufgabenstellung}
+
+% Moving business logic closer to the user, does it make for more performant and scalable web-based systems?

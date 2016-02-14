@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/*
+ * jQuery File Upload Plugin CSS 1.3.0
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2013, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://www.opensource.org/licenses/MIT
+ */
+
+
+section, footer, header, aside{
+    display: block;
+}
+
+
+/*----------------------------
+    The file upload form
+-----------------------------*/
+
+#fileupload{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color:#f8f8f8;
+
+    width: 50%;
+    padding: 25px 50px;
+    border: 1px solid #ccc;
+
+    margin: 30px auto;
+}
+
+#fileupload .input-group {
+    margin-bottom: 15px;
+}
+
+#fileupload ul{
+    list-style:none;
+    margin:0 -50px;
+    padding-bottom: 15px;
+    border-top: 1px solid #ccc;
+}
+
+#fileupload ul li{
+    background-color:#f8f8f8;
+    padding:15px;
+    height:64px;
+    position: relative;
+}
+
+#fileupload ul li input{
+    display: none;
+}
+
+#fileupload ul li p{
+    overflow: hidden;
+    white-space: nowrap;
+    color: #777;
+    font-size: 16px;
+    position: absolute;
+    top: 20px;
+}
+
+#fileupload ul li i{
+    font-style: normal;
+    font-size: 14px;
+    color:#7f7f7f;
+    display:block;
+}
+
+#fileupload ul li canvas{
+    top: 15px;
+    left: -10px;
+    position: absolute;
+}
+
+#fileupload ul li span{
+    width: 15px;
+    height: 12px;
+    background: url('../img/icons.png') no-repeat;
+    position: absolute;
+    top: 25px;
+    right: 33px;
+    cursor:pointer;
+}
+
+#fileupload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#fileupload ul li.error p{
+    color:red;
+}
+
+/* hide progess bar initially */
+.progress{
+    display:none;
+    background-color: #eee;
+}
+
+/*----------------------------
+    original fileupload css
+-----------------------------*/
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+/* Fixes for IE < 8 */
+@media screen\9 {
+  .fileinput-button input {
+    filter: alpha(opacity=0);
+    font-size: 100%;
+    height: 100%;
+  }
+}
