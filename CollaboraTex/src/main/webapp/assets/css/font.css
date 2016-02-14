@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02.05.2014, 14:17:09
+    Author     : daniel
+*/
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/sourcesanspro/eot/SourceSansPro-Regular.eot?') format('eot'),
+         url('../fonts/sourcesanspro/woff/ttf/SourceSansPro-Regular.ttf.woff') format('woff'),
+         url('../fonts/sourcesanspro/svg/SourceSansPro-Regular.svg') format('svg');
+}
+@font-face {
+    font-family: 'Source Sans Pro Light';
+    src: url('../fonts/sourcesanspro/eot/SourceSansPro-Light.eot?') format('eot'),
+         url('../fonts/sourcesanspro/woff/ttf/SourceSansPro-Light.ttf.woff') format('woff'),
+         url('../fonts/sourcesanspro/svg/SourceSansPro-Light.svg') format('svg');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Source Sans Pro Bold';
+    src: url('../fonts/sourcesanspro/eot/SourceSansPro-Bold.eot?') format('eot'),
+         url('../fonts/sourcesanspro/woff/ttf/SourceSansPro-Bold.ttf.woff') format('woff'),
+         url('../fonts/sourcesanspro/svg/SourceSansPro-Bold.svg') format('svg');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Source Sans Pro Light Italic';
+    src: url('../fonts/sourcesanspro/eot/SourceSansPro-It.eot?') format('eot'),
+         url('../fonts/sourcesanspro/woff/ttf/SourceSansPro-It.ttf.woff') format('woff'),
+         url('../fonts/sourcesanspro/svg/SourceSansPro-It.svg') format('svg');
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: 'Source Sans Pro Italic';
+    src: url('../fonts/sourcesanspro/eot/SourceSansPro-LightIt.eot?') format('eot'),
+         url('../fonts/sourcesanspro/woff/ttf/SourceSansPro-LightIt.ttf.woff') format('woff'),
+         url('../fonts/sourcesanspro/svg/SourceSansPro-LightIt.svg') format('svg');
+    font-style: italic, oblique;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Source Sans Pro Italic Bold';
+    src: url('../fonts/sourcesanspro/eot/SourceSansPro-BoldIt.eot?') format('eot'),
+         url('../fonts/sourcesanspro/woff/ttf/SourceSansPro-BoldIt.ttf.woff') format('woff'),
+         url('../fonts/sourcesanspro/svg/SourceSansPro-BoldIt.svg') format('svg');
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/museo/Museo.eot?') format('eot'),
+         url('../fonts/museo/Museo.woff') format('woff'),
+         url('../fonts/museo/Museo.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Museo Slab';
+    src: url('../fonts/museo/Museo_Slab.eot?') format('eot'),
+         url('../fonts/museo/Museo_Slab.woff') format('woff'),
+         url('../fonts/museo/Museo_Slab.svg') format('svg'),
+         url('../fonts/museo/Museo_Slab.ttf') format('ttf');
+}

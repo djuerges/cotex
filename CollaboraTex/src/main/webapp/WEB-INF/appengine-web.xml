@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>collaboratex</application>
+    <version>${appengine.app.version}</version>
+    <threadsafe>true</threadsafe>
+
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+    </system-properties>
+    
+    <!-- enable sessions -->
+    <sessions-enabled>true</sessions-enabled>
+    <!--    Note: Because App Engine stores session data in the datastore and memcache, all values stored in the session must implement the java.io.Serializable interface.
+    It's possible to reduce request latency by configuring your application to asynchronously write HTTP session data to the datastore:-->
+    <async-session-persistence enabled="true" />
+</appengine-web-app>

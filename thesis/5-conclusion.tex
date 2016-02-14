@@ -1,0 +1,132 @@
+\chapter{Conclusion}
+To conclude this work, its outcome is reflected and structured into the following subchapters. Starting with the \nameref{sec:work-insights} which describes major problems and findings during its development, it is succeeded by the functionalities which were ultimately implemented and which were not. 
+
+The last and final remarks apply for the outlook of further potential implementations and works.
+
+\section{Insights of the work in hand}
+\label{sec:work-insights}
+Starting this work, research was conducted about the basic principles of collaboration of invidials and specifically the algorithms, design patterns and framework and library encapsulating such functionality.
+
+Additionally, it was attempted to find out if there are pre-exisiting solutions that are dedicated to provide a \LaTeX editor that can be used collaboratively in real-time and allows the self-hosting on one's own infrastructure.
+
+Both investigations for collaboration libraries and editors lead to the initial insight that \name{Node.js} is the currently leading platform for collaborative solutions. This is due to its nature as light\-weight, asynchronous web server that excels for thousands of concurrent connections.
+
+The \nameref{subsubsec:operational-transform} libraries \name{TogetherJS}, \name{OT.js} and \name{ShareJS} are all based on Node.js, as well as the plain-text editors with integrated collaboration features \name{FirePad} and \name{Etherpad}. The same applies for the, at the time of the inception of this work, solely known \LaTeX editor \name{\nameref{subsec:flylatex}}.
+
+As the \nameref{subsec:technical-constraints} and \nameref{subsec:software-requirements} of the designated users in the Institue of Telematics were identified, a thought was to simply extend the \name{\nameref{subsec:flylatex}} editor to provide the desired functionalities. Yet it was immediately ruled out as even the most basic functions were not providing a satisfactory user experience, leading to the belief that it made more sense to re-implement such an collaborative \LaTeX real-time editor from scratch.
+
+The other major reason was the wish to compare the performance of Node.js with an other true and established Cloud Computing technology.
+
+\pagebreak
+
+For this purpose, the implementation in \name{Java}, based on the \name{Google App Engine} platform and \name{AppScale} was chosen. The downside of this approach was the apparent lack of \nameref{subsec:collaborative-editing-approach} libraries and support in Java. It was eluded by the use of \name{Google Diff Match Patch}, a \nameref{subsubsec:operational-transform} library, the consequence being that the sychronisation sequence and message exchange between clients using the \LaTeX editor had to be self-implemented. Albeit the final implementation is a simpler version of the \nameref{subsubsec:operational-transform} approach: It applies document updates on the server only and then broadcasts it to the clients, assuming that delay of messages is ruled out in the target environment, the ITM Cloud Computing Lab (compare chapter \ref{simpler-ot-reason}). Given the time and scope of this work, a more sophisticated solution proved to be unfeasible.
+
+Halfway through this work however, there was a caesura. They previously only as website operated \name{\nameref{subsec:sharelatex}} that required subscriptions for its extensive services, went open source  \cite{website:sharelatex-oss}. Compare chapter \ref{subsec:sharelatex} for the reasons behind their decision. Although \nameref{subsec:sharelatex} is more well-engineered than the previously cited alternative and provides a better user experience, the implementation was continued nevertheless. For one reason, to create a custom-tailored solution for the ITM Cloud Computing Lab that focused on slightly different aspects. For another reason, the performance comparision could be conducted in the same way, as this solution is also based on Node.js. And for the last reason, the author of this work was eager to achieve at least the creation of a collaborative \LaTeX editor that was of equal value.
+
+The decision was made to develop two different servers. One that provides the compilation of \LaTeX documents, called \name{\nameref{subsec:compilatex}}, and one for the user front-end with the editor \name{\nameref{subsec:collaboratex}}. Their respective architecture, its data model, an overview of their services, and a detailled walkthrough of their implementation and tests are described in chapter \ref{chap:architecture}.
+
+During the implementation, the complexity of architecture and the integration of different technologies proved to be a main effort for both servers, fighting especially with configuration and to a lesser extent also programming errors. Once the foundation was layed, the development happened test-driven and progressed rather fast by the assistance of regression tests.
+
+Google App Engine proved to be quite suitable for the needs of a collaborative \LaTeX editor, especially with its services described in chapter \nameref{gae-services}. Besides handling entities in the \name{DataStore} and larges files in the \name{BlobStore}, there is a \name{Search API} to provide search functionality and a \name{Channel API} to manage persistent connections to clients. The only negative impact was the absence of a direct access to the file system, Google App Engine has no such thing due to its shared and parallel nature. This lead to the constraint that projects in \nameref{subsec:collaboratex} cannot contain subfolders as the mapping would constitute a relatively complex issue.
+
+The same suitability also holds true for the integrated \name{Ace Editor} and \name{Google Diff Match Patch} library (compare chapter \nameref{subsec:collaboratex}).
+
+What proves to be a problem however are the changing releases of OpenStack. When a server is shutdown, it is usually sufficient to simply rejoin all services. But with the provided OpenStack test server, things are a bit different as it has CentOS 6.5 installed as operating system.
+
+The whole installation must be re-run, for which the current release is downloaded. As the current releases might not match the release that was actually installed on the server, it may lead to problems with package dependencies and various other things in a lot of times. \cite{website:openstack-releases}
+
+This also happened during this work, as the latest release changed from the pre-installed \name{Grizzly} to the \name{Icehouse} release, see the OpenStack release page. \cite{website:openstack-releases} It led to problems with Python packages - which seems to be a particular problem of the DevStack installation, used for the OpenStack server at hand - and eventually to the omission of a comparison between the platforms of both the existing \LaTeX editors and the one developed in this work, \name{Node.js} and \name{Google App Engine}, in terms of scalability and performance.
+
+For to the productive use of the \LaTeX editor, it would be recommended to use a regular OpenStack installation as opposed to the development version.
+
+\section{Implemented Functionalities}
+\label{sec:implemented-functionalities}
+As the success of this work is largely based on the effective realisation of the majority of \nameref{subsubsec:functional-requirements} while giving regards to the \nameref{subsubsec:implicit-requirements}, their successful implementation is noted in the following.
+
+Out of 21 functionalities, 12 could could be implemented, among them the all five from the group of \nameref{tab:high-priority} and two thirds of those with medium priority. Of the \nameref{tab:low-priority}, three were completed. The arithmetic average for their rating is 7.4 and the median 7.6 for them.
+
+\begin{table}[H] % \todo{vor Druck ändern -> h!}
+	\begin{center}
+		\footnotesize
+		\setlength\extrarowheight{5pt}
+		\rowcolors{1}{}{lightgray}
+		\begin{tabular}{ p{11cm} cp{1.5cm} }
+		  	\textbf{Functionality} 	  														& \textbf{Rating} \\
+			\hline
+			Undo/Redo of edits																& 8.7 \\
+			Support of bibliography/BibTeX management										& 8.3 \\
+			Viewable log of the compilation													& 8.3 \\
+			Automatic background save while editing (e.g. every five minutes)				& 8.1 \\
+			Tabs for multiple opened documents and parallel editing							& 8.0 \\
+			\hline
+			Download of single files/the whole project										& 7.8 \\
+			Import function for existing \LaTeX projects									& 7.3 \\
+			Code completion similiar to an IDE												& 7.1 \\
+			Download of single files/the whole project										& 7.0 \\
+			\hline
+			Toolbar for the most common commands (bold text, section, figure et cetera)		& 6.1 \\
+ 			Capability to print documents													& 6.1 \\
+			Collection of formulas, extended commands, symbol tables						& 5.7 \\
+		\end{tabular}
+		\caption{Implemented functionalities}
+	\end{center}
+\end{table}
+
+\pagebreak
+
+On the contrary, nine features were left partially or fully unimplemented. Only two \nameref{tab:medium-priority} could not be accomplished, the vast majority of seven functionalities is however made up of those with low priority. \\ They have an average mean rating of 5.4 which is significantly lower than for their counter-parts, the implemented functionalites from above, and a median of 6.1.
+
+\begin{table}[H] % \todo{vor Druck ändern -> h!}
+	\begin{center}
+		\footnotesize
+		\setlength\extrarowheight{5pt}
+		\rowcolors{1}{}{lightgray}
+		\begin{tabular}{ p{11cm} cp{1.5cm} }
+		  	\textbf{Functionality} 	  														& \textbf{Rating} \\
+			\hline
+			Full-text search over all documents												& 7.6 \\
+			Notifications on changes made by other users or their activities				& 7.1 \\
+			\hline
+			Rights management for documents (not accessible for others, share with user)	& 6.5 \\
+			Preview of the document as parallel view of \LaTeX and \fileformat{PDF}			& 6.5 \\
+			Existing logins can be used (authentification by LDAP)							& 6.1 \\
+			Personalised settings of editor appearance (font size, theme and so on)			& 6.0 \\
+			Bookmarks/markers can be set in documents				 						& 5.3 \\
+			\LaTeX templates to follow the ITM conventions									& 5.0 \\
+			Syntax highlighting for other languages except \LaTeX							& 4.2 \\
+		\end{tabular}
+		\caption{Unimplemented functionalitites}
+		\label{unimplemented-functionalitites}
+	\end{center}
+\end{table}
+
+The full-text search is not yet fully implemented, as explained in chapter \nameref{reason-no-full-text-support}, because it was not considered to be of such importance to solve the related problems in the short time of this work. What was implemented however, was a basic search for project files and their attributes such as name, size, content type and so forth.
+
+All features regarding the user management were also left unimplemented, such as notifications, rights management, LDAP logins, personalised settings. It was decided that the integration of this would require major effort and a vast time budget that would be at the expense of other important functionalities that were prioritised higher.
+
+While the preview of the document as parallel view of \LaTeX and \fileformat{PDF} was not accomplished, a \fileformat{PDF} viewer was integrated very well (compare chapter \ref{pdf-viewer}). The solution, opening a document in a new browser tab, could easily be reconstructed to achieve the parallel view. But for reasons of better accessibility of both the editor and the viewer, it was decided to leave them as independent components.
+
+All other functionalities, bookmarks, templates and syntax highlighting for other languages, were simply ignored due to insufficient significance to the users.
+
+At last, there is one feature missing that was valued of major importance and regarded as indispensable: Document changes should be backed by the usage of a version control system. As the way in which Google App Engine operates with files is rather unique, it lead to a rather extensive problem how to obtain files from the \name{BlobStore} and put them under version control. Given the time limitation of this work, this concern was eventually not addressed.
+
+\section{Outlook}
+\label{sec:outlook}
+Contemplating about future capabilities and developments regarding this \LaTeX online editor, what first comes to mind are the \nameref{unimplemented-functionalitites}. But beyond that, there are endless possibilities of additional features that would enrich not only this editor but also the way in which a user perceives its use.
+
+\begin{itemize}
+	\item The compilation of \LaTeX files could be executed with \name{latexmk}, just as in \nameref{subsec:sharelatex}, resulting in quicker and easier compilation.
+	\item Easier configuration and deployment of the \name{CompiLaTeX} and \name{CollaboraTeX} server by loading their start-up parameter such as port, URL, available \LaTeX engines by XML or properties file.
+	\item The spellchecking of documents could be supported in various languages by extending the used \name{Ace Editor}.
+	\item Inline references in the editor for \LaTeX packages and commands with a brief explanation of them in a pop-up.
+	\item Missing \LaTeX packages could be automatically downloaded by the \name{CompiLaTeX} server and added to the project directory to re-compile the document successfully.
+	\item Wrong paths of included files or images could be detected prior to compilation and a warning issued that there are missing references.
+	\item Retrieval of the supported \LaTeX packages on the \name{CompiLaTeX} server by RESTful web service.
+	\item Better analysis of the compilation result and abolition of the \parameter{-interaction=batchmode} parameter, instead the user will be notified of compilation errors and can decide how to proceed.
+\end{itemize}
+
+It is imaginable that this editor will be developed further in other thesis or case studies at the University of Lübeck, which also leads to the issue of publication: At the moment, this work is still being hosted by the private Git repository of the Institute of Telematics, but it is planned to release it as free and open source software for the common public interest. A relocation to a GitHub repositiory might therefore be in the best interest of all persons involved. In addition to it, the necessary licence for the publication must also be resolved.
+
+Furthermore, it will be interesting to observe how Google will continuously evolve the Google App Engine platform and how its functions and capability will progress.
+
+This applies even more for the nowadays increasingly smarter and comprehensive collaboration libraries, with \name{TogetherJS} parading the ever-growing opportunities. It is the first library to integrate messaging and audio chat while only requiring the inclusion of a single JavaScript snippet (compare page \pageref{together-js}).

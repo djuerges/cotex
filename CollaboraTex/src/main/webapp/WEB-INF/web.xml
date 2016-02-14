@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    
+    <!-- 
+            
+            REST SERVICES
+        
+    -->
+    <!-- servlet for the REST services -->
+    <servlet>
+        <servlet-name>RestServices</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>de.uniluebeck.collaboratex.RestServices</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RestServices</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- 
+            
+            SERVER CONFIGURATION
+        
+    -->
+    <!-- set file that will be served when requesting server root url http://server/ -->
+    <welcome-file-list>
+        <welcome-file>main.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- add listener for token and opened documents management -->
+    <listener>
+        <listener-class>de.uniluebeck.collaboratex.session.SessionManager</listener-class>
+    </listener>
+    
+    <!-- set session timeout to 15 minutes -->
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+    
+    <!-- enable domain-wide HTTPS -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>base</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+</web-app>
